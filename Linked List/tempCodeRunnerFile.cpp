@@ -1,3 +1,11 @@
-head->next = new node(2);
-    // head->next->next = new node(3);
-    // head->next->next->next = new node(4);
+insert(tail,0,1);
+	// // print(tail);
+
+	// insert(tail,1,3);
+	// // print(tail);
+
+	// insert(tail,1,2);
+	// print(tail);
+
+	// del(tail,0);
+	// print(tail);
