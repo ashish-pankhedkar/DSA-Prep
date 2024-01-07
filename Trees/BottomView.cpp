@@ -6,7 +6,7 @@ struct Node
     Node *left;
     Node *right;
 };
-vector<int> topView(Node *root)
+vector<int> bottomView(Node *root)
 {
     vector<int> ans;
     if (root == NULL)

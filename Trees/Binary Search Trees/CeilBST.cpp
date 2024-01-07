@@ -1,16 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-struct TreeNode
+struct Node
 {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    int data;
+    Node *left, *right;
 };
 
-int findCeil(TreeNode *root, int input)
+int findCeil(Node *root, int input)
 {
     if (root == NULL)
         return -1;

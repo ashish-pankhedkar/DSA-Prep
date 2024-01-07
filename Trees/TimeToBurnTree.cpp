@@ -39,6 +39,7 @@ int amountOfTime(TreeNode *root, int start)
     queue<TreeNode *> q;
     q.push(root);
     // do a bfs traversal to add all parents to map
+    // since we can keep track of left and right but not of parent we need to somehow store it. Similar to Graph
     while (!q.empty())
     {
         int size = q.size();
