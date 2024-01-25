@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+//https://www.geeksforgeeks.org/problems/replace-os-with-xs0052/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=bottom_sticky_on_article
 void dfs(int row, int col, vector<vector<char>> &grid, vector<vector<int>> &vis)
 {
     int delrow[] = {-1, 0, 1, 0};
@@ -21,11 +22,8 @@ void dfs(int row, int col, vector<vector<char>> &grid, vector<vector<int>> &vis)
         }
     }
 }
-void solve(vector<vector<char>> &board)
+vector<vector<char>> fill(int m, int n, vector<vector<char>> board)
 {
-
-    int n = board.size();
-    int m = board[0].size();
 
     vector<vector<int>> vis(n, vector<int>(m, 0));
 
@@ -58,16 +56,17 @@ void solve(vector<vector<char>> &board)
     {
         for (int j = 0; j < m; j++)
         {
-            cout << vis[i][j] << " ";
+
             if (board[i][j] == 'O' && vis[i][j] == 0)
             {
                 board[i][j] = 'X';
             }
         }
-        cout << endl;
     }
+    return board;
 }
 int main()
 {
     return 0;
 }
+

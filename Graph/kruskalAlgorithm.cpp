@@ -80,6 +80,7 @@ class Solution
         }
         return mstwt;
     }
+};
 int main(){
    return 0;
 }
