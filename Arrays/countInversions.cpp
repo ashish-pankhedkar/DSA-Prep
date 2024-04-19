@@ -53,7 +53,7 @@ int mergeSort(vector<int> &arr, int low, int high)
     count += mergeSort(arr, mid + 1, high);
     count += merge(arr, low, mid, high);
     return count; 
-
+}
 int numberOfInversions(vector<int> &a, int n)
 {
     // Write your code here.
