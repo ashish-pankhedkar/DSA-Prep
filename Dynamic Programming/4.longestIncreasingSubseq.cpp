@@ -39,17 +39,18 @@ int helper(int ind, int prevind, vector<int> &nums, vector<vector<int>> &dp)
 }
 int lengthOfLIS(vector<int> &nums)
 {
-    vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));
     int n = nums.size();
+    // n+1 is declared because we are doing ind+1 line 49. We need to do prevInd +1 do access dp
+    vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));
     for (int ind = n - 1; ind >= 0; ind--)
     {
         for (int prevind = ind - 1; prevind >= -1; prevind--)
         {
-            int len1 = dp[ind + 1][prevind + 1];
+            int len1 = dp[ind + 1][prevind + 1]; // this means starting from next index and given prevInd. remember we need to do +1 for prev ind
             int len2 = 0;
             if (prevind == -1 || nums[ind] > nums[prevind])
             {
-                len2 = 1 + dp[ind + 1][ind + 1];
+                len2 = 1 + dp[ind + 1][ind + 1]; // this means starting from next index and current indx as prev index . remember we need to do +1 for prev ind
             }
             dp[ind][prevind + 1] = max(len1, len2);
         }

@@ -37,8 +37,7 @@ int minFallingPathSum(vector<vector<int>> &matrix)
 {
     int n = matrix.size();
     int mini = INT_MAX;
-    for (int i = 0; i < n; i++)
-    { // all the endpoints in last row
+    // all the endpoints in last row
 
         vector<vector<int>> dp(n, vector<int>(n, INT_MAX));
 
@@ -65,7 +64,7 @@ int minFallingPathSum(vector<vector<int>> &matrix)
         {
             mini = min(mini, dp[n - 1][i]);
         }
-    }
+    
     return mini;
 }
 

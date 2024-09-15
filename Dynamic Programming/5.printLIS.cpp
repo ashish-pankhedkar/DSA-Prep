@@ -33,7 +33,8 @@ vector<int> lengthOfLIS(vector<int> &nums)
         lastind = hash[lastind];
         ans.push_back(nums[lastind]);
     }
-    return reverse(ans.begin(), ans.end());
+     reverse(ans.begin(), ans.end());
+     return ans;
 }
 int main()
 {
